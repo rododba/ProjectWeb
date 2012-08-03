@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/scge/resources/css/accordionmenu.css" type="text/css" media="screen" />
 </head>
 <body>
+    <img src="/scge/resources/style/images/page_bg.jpg"  id="full-screen-bi" /> 
     <div id="floater"></div>
     <div id="centered">
     

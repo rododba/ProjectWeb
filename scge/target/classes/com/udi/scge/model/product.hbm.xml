@@ -2,12 +2,20 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 <!--   <class name="com.udi.scge.model.Person" schema="udi" table="tbl_person"> -->
-  <class name="com.udi.scge.model.Person" table="tbl_person"> 
+  <class name="com.udi.scge.model.Product" table="t_product"> 
     <id column="id" name="id">
       <generator class="native"/>
     </id>
+    <property column="created" name="created"/>
+    <property column="updated" name="updated"/>
+    <property column="createdBy" name="createdBy"/>
+    <property column="updatedBy" name="updatedBy"/>
+    <property column="isActive" name="isActive"/>
+   	<property column="description" name="description"/>
     <property column="name" name="name"/>
-    <property column="gender" name="gender"/>
-    <property column="dob" name="dob"/>
+    <property column="sku" name="sku"/>
+    <property column="priceBase" name="priceBase"/>
+    <property column="priceMin" name="priceMin"/>
+    <property column="priceMax" name="priceMax"/>
   </class>
 </hibernate-mapping>

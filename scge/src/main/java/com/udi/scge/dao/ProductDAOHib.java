@@ -7,27 +7,27 @@ package com.udi.scge.dao;
 
 import java.util.List;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-import com.udi.scge.model.Person;
+import com.udi.scge.model.Product;
 
 /**
  * 
  * @author rledezma
  */
-public class ProductDAOHib extends HibernateDaoSupport implements PersonDAO{
+public class ProductDAOHib extends HibernateDaoSupport implements ProductDAO{
 
-    public List getPersonList(){
-        return getHibernateTemplate().find("from Person");
+    public List getProductList(){
+        return getHibernateTemplate().find("from Product");
     }
 
-    public Person getPerson(Long id){
-        return (Person) getHibernateTemplate().get(Person.class, id);
+    public Product getProduct(Long id){
+        return (Product) getHibernateTemplate().get(Product.class, id);
     }
 
-    public void savePerson(Person person){
-        this.getHibernateTemplate().saveOrUpdate(person);
+    public void saveProduct(Product product){
+        this.getHibernateTemplate().saveOrUpdate(product);
     }
 
-    public void deletePerson(Long id){
-        getHibernateTemplate().delete(getPerson(id));
+    public void deleteProduct(Long id){
+        getHibernateTemplate().delete(getProduct(id));
     }
 }

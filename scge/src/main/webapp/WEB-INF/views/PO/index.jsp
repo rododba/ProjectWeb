@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<img alt="fondo" src="images/page_bg.jpg"  id="full-screen-bi" /> 
+	<img src="/scge/resources/style/images/page_bg.jpg"  id="full-screen-bi" /> 
     <div id="floater"></div>
     <div id="centered">
     

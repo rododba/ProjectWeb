@@ -106,7 +106,7 @@
 					
 					<li><a href="#"><em>01</em>Buscar<span>-</span></a></li>
 					
-					<li><a href="#"><em>02</em>Ingresar<span>-</span></a></li>
+					<li><a href="Product/index.html"><em>02</em>Ingresar<span>-</span></a></li>
 					
 					<li><a href="#"><em>03</em>Mostrar Todos<span>-</span></a></li>
 

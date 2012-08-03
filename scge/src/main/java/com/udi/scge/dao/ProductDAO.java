@@ -6,7 +6,7 @@
 package com.udi.scge.dao;
 
 import java.util.List;
-import com.udi.scge.model.Person;
+import com.udi.scge.model.Product;
 
 /**
  *
@@ -14,11 +14,11 @@ import com.udi.scge.model.Person;
  */
 public interface ProductDAO {
 
-    public List getPersonList();
+    public List getProductList();
 
-    public Person getPerson(Long id);
+    public Product getProduct(Long id);
 
-    public void savePerson(Person person);
+    public void saveProduct(Product product);
 
-    public void deletePerson(Long id);
+    public void deleteProduct(Long id);
 }

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.support.PagedListHolder;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
-import com.udi.scge.service.PersonService;
+import com.udi.scge.service.ProductService;
 
 /**
  *
@@ -20,17 +20,17 @@ import com.udi.scge.service.PersonService;
  */
 public class IndexProductController implements Controller {
 
-    private PersonService personService;
-    public void setPersonService(PersonService personService) {
-        this.personService = personService;
+    private ProductService productService;
+    public void setProductService(ProductService productService) {
+        this.productService = productService;
     }
 
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Map model = new HashMap();
-        PagedListHolder pagedListHolder = (PagedListHolder) request.getSession().getAttribute("personList");
+        PagedListHolder pagedListHolder = (PagedListHolder) request.getSession().getAttribute("productList");
 
         if(pagedListHolder == null){
-            pagedListHolder = new PagedListHolder(personService.getPersonList());
+            pagedListHolder = new PagedListHolder(productService.getProductList());
         }
         else{
             String page = (String) request.getParameter("page");
@@ -42,9 +42,9 @@ public class IndexProductController implements Controller {
             }
         }
 
-        request.getSession().setAttribute("personList", pagedListHolder);
-        model.put("personList", pagedListHolder);
-        return new ModelAndView("index", model);
+        request.getSession().setAttribute("productList", pagedListHolder);
+        model.put("productList", pagedListHolder);
+        return new ModelAndView("Product/index", model);
     }
 
 }

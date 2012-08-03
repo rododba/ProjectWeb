@@ -6,34 +6,34 @@
 package com.udi.scge.service;
 
 import java.util.List;
-import com.udi.scge.dao.PersonDAO;
-import com.udi.scge.model.Person;
+import com.udi.scge.dao.ProductDAO;
+import com.udi.scge.model.Product;
 
 /**
  *
  * @author rledezma
  */
-public class ProductServiceImpl implements PersonService{
+public class ProductServiceImpl implements ProductService{
 
-    private PersonDAO personDAO;
-    public void setPersonDAO(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    private ProductDAO productDAO;
+    public void setProductDAO(ProductDAO productDAO) {
+        this.productDAO = productDAO;
     }
 
-    public List getPersonList() {
-        return personDAO.getPersonList();
+    public List getProductList() {
+        return productDAO.getProductList();
     }
 
-    public Person getPerson(Long id){
-        return personDAO.getPerson(id);
+    public Product getProduct(Long id){
+        return productDAO.getProduct(id);
     }
 
-    public void savePerson(Person person) {
-        personDAO.savePerson(person);
+    public void saveProduct(Product product) {
+        productDAO.saveProduct(product);
     }
 
-    public void deletePerson(Long id) {
-        personDAO.deletePerson(id);
+    public void deleteProduct(Long id) {
+        productDAO.deleteProduct(id);
     }
 
 }

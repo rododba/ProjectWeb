@@ -13,6 +13,7 @@
     <script type="text/javascript" src="/scge/resources/script/calendar.js"></script>
 </head>
 <body>
+    <img src="/scge/resources/style/images/page_bg.jpg"  id="full-screen-bi" /> 
     <div id="floater"></div>
     <div id="centered">
     
